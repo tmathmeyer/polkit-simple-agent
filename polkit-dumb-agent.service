@@ -1,0 +1,13 @@
+[Unit]
+Description=polkit-dumb-agent
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/polkit-dumb-agent
+
+[Install]
+WantedBy=multi-user.target

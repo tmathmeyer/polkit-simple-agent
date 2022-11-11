@@ -46,7 +46,7 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    QFileInfo responderInfo(LIBEXEC_DIR "polkit-dumb-agent-responder");
+    QFileInfo responderInfo("/lib/polkit-dumb-agent/polkit-dumb-agent-responder");
     if (!responderInfo.exists() || !responderInfo.isExecutable()) {
         qWarning() << "responder" << responderInfo.filePath() << "not installed properly, exists:" << responderInfo.exists() << "exec:" << responderInfo.isExecutable();
         return 1;
